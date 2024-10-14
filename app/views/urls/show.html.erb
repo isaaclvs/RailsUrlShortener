@@ -1,0 +1,4 @@
+<h1>Your new URL</h1>
+
+<p>Original URL: <%= @url.original_url %></p>
+<p>Short URL: <%= link_to "#{request.base_url}/#{@url.short_url}", "/#{@url.short_url}", target: "_blank", rel: "noopener noreferrer" %></p>

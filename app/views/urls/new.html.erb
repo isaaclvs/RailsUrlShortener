@@ -1,0 +1,17 @@
+<h1>URL Shortener</h1>
+
+<%= form_with model: @url, local: true do |form| %>
+  <%= form.label :original_url, "Enter URL" %>
+  <%= form.text_field :original_url %>
+  <%= form.submit "Shorten" %>
+<% end %>
+
+<% if @url.errors.any? %>
+  <ul>
+    <% @url.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
